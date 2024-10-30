@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,8 +17,8 @@ public class NewBehaviourScript : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector2 postion = transform.position;
-        postion.x = postion.x + 5.0f; 
-        postion.y = postion.y + 5.0f;
+        postion.x = postion.x + 5.0f * horizontal * Time.deltaTime;
+        postion.y = postion.y + 5.0f * vertical * Time.deltaTime;
         
 
         transform.position = postion;
