@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.UI;
+
 
 public class DamageZone : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class DamageZone : MonoBehaviour
     {
         PlayerController controller = other.GetComponent<PlayerController>();
 
-        if(controller != null )
+        if (controller != null) 
         {
             controller.ChangeHealth(-1);
         }
